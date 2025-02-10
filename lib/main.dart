@@ -33,7 +33,11 @@ class Homescren extends StatelessWidget{
           Container(
             height: 200,
             width: double.infinity,
-            color: Colors.deepOrange.shade200,
+
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0),bottomLeft: Radius.circular(20.0)),
+              color: Colors.deepOrange.shade200,
+            ),
           ),
         ],
       ),
