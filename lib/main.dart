@@ -172,7 +172,7 @@ class Homescren extends StatelessWidget{
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Text("Active Projects",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25),),
+                  Text("Active Projects",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 22),),
                 ],
               ),
             ),
