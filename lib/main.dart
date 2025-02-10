@@ -107,16 +107,64 @@ class Homescren extends StatelessWidget{
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
+                      SizedBox(width: 15,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("To Do",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w800),),
-                          SizedBox(width: 5,),
+                          Text("To Do",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
+                          SizedBox(height: 5,),
                           Text("5 task now,1 started"),
                         ],
                       ),
                     ],
                   ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Icon(Icons.alarm,color: Colors.white,),
+                        decoration: BoxDecoration(
+                          color: Colors.blueAccent,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("In Progress",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
+                          SizedBox(height: 5,),
+                          Text("1 task now,now started"),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Icon(Icons.alarm,color: Colors.white,),
+                        decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Done",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
+                          SizedBox(height: 5,),
+                          Text("18 task now,13 started"),
+                        ],
+                      ),
+                    ],
+                  ),
+
                 ],
               ),
             )
