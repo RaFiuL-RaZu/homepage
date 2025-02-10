@@ -53,7 +53,7 @@ class Homescren extends StatelessWidget{
                 child: ListView(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Center(
                           child: CircleAvatar(
@@ -61,12 +61,11 @@ class Homescren extends StatelessWidget{
                             backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQ-HkOk0nyWwdR6GNhI19KyuIDOyg-_w_tQ&s"),
                           ),
                         ),
-                        SizedBox(width: 100,),
+                        SizedBox(width:5,),
                         Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("RaFiuL RaZu"),
-                            Text("App Developer"),
+                            Text("RaFiuL Isalam Razu",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25),),
+                            Text("App Developer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
                           ],
                         ),
                       ],
