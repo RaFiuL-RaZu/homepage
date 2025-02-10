@@ -74,6 +74,52 @@ class Homescren extends StatelessWidget{
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("My Tasks",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 23),),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    child: Icon(Icons.account_box,color: Colors.white,),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.teal,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: Icon(Icons.alarm,color: Colors.white,),
+                        decoration: BoxDecoration(
+                          color: Colors.redAccent,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("To Do",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w800),),
+                          SizedBox(width: 5,),
+                          Text("5 task now,1 started"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
