@@ -28,19 +28,52 @@ class Homescren extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orangeAccent.shade100,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(Icons.search),
+          ),
+        ],
+      ),
+      drawer: Drawer(),
       body: Column(
         children: [
           Container(
-            height: 200,
+            height: 150,
             width: double.infinity,
-
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0),bottomLeft: Radius.circular(20.0)),
-              color: Colors.deepOrange.shade200,
+              color: Colors.orangeAccent.shade100,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        radius: 45,
+                        backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQ-HkOk0nyWwdR6GNhI19KyuIDOyg-_w_tQ&s"),
+                      ),
+                      SizedBox(width: 100,),
+                      Column(
+                        children: [
+                          Text("RaFiuL RaZu"),
+                          Text("App Developer"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
       ),
+
     );
   }
 
