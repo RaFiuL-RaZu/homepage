@@ -39,145 +39,190 @@ class Homescren extends StatelessWidget{
       ),
       drawer: Drawer(),
       body: Center(
-        child: Column(
-          children: [
-            Container(
-              height: 100,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0),bottomLeft: Radius.circular(20.0)),
-                color: Colors.orangeAccent.shade100,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0),bottomLeft: Radius.circular(20.0)),
+                  color: Colors.orangeAccent.shade100,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListView(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: CircleAvatar(
+                              radius: 40,
+                              backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQ-HkOk0nyWwdR6GNhI19KyuIDOyg-_w_tQ&s"),
+                            ),
+                          ),
+                          SizedBox(width:5,),
+                          Column(
+                            children: [
+                              Text("RaFiuL Isalam Razu",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25),),
+                              Text("App Developer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              child: Padding(
+              Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ListView(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("My Tasks",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 23),),
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(Icons.account_box,color: Colors.white,),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.teal,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Center(
-                          child: CircleAvatar(
-                            radius: 40,
-                            backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQ-HkOk0nyWwdR6GNhI19KyuIDOyg-_w_tQ&s"),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          child: Icon(Icons.alarm,color: Colors.white,),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent,
+                            borderRadius: BorderRadius.circular(50),
                           ),
                         ),
-                        SizedBox(width:5,),
+                        SizedBox(width: 15,),
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("RaFiuL Isalam Razu",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25),),
-                            Text("App Developer",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                            Text("To Do",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
+                            SizedBox(height: 5,),
+                            Text("5 task now,1 started"),
                           ],
                         ),
                       ],
                     ),
+                    SizedBox(height: 20,),
+                    Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          child: Icon(Icons.alarm,color: Colors.white,),
+                          decoration: BoxDecoration(
+                            color: Colors.blueAccent,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                        ),
+                        SizedBox(width: 15,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("In Progress",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
+                            SizedBox(height: 5,),
+                            Text("1 task now,now started"),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20,),
+                    Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          child: Icon(Icons.alarm,color: Colors.white,),
+                          decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                        ),
+                        SizedBox(width: 15,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Done",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
+                            SizedBox(height: 5,),
+                            Text("18 task now,13 started"),
+                          ],
+                        ),
+                      ],
+                    ),
+
                   ],
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("My Tasks",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 23),),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(Icons.account_box,color: Colors.white,),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.teal,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    SizedBox(width: 5,),
+                    Text("Active Projects",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    GridView(
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2),
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 100,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.teal,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 100,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.teal,
+                          ),
+                        ),
+                        Container(
+                          height: 100,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.teal,
+                          ),
+                        ),
+                      ],
                     ),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 50,
-                        child: Icon(Icons.alarm,color: Colors.white,),
-                        decoration: BoxDecoration(
-                          color: Colors.redAccent,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                      SizedBox(width: 15,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("To Do",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
-                          SizedBox(height: 5,),
-                          Text("5 task now,1 started"),
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 20,),
-                  Row(
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 50,
-                        child: Icon(Icons.alarm,color: Colors.white,),
-                        decoration: BoxDecoration(
-                          color: Colors.blueAccent,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                      SizedBox(width: 15,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("In Progress",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
-                          SizedBox(height: 5,),
-                          Text("1 task now,now started"),
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 20,),
-                  Row(
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 50,
-                        child: Icon(Icons.alarm,color: Colors.white,),
-                        decoration: BoxDecoration(
-                          color: Colors.amber,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                      SizedBox(width: 15,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Done",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800),),
-                          SizedBox(height: 5,),
-                          Text("18 task now,13 started"),
-                        ],
-                      ),
-                    ],
-                  ),
 
-                ],
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  SizedBox(width: 10,),
-                  Text("Active Projects",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 22),),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
 
