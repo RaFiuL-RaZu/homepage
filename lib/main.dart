@@ -167,7 +167,15 @@ class Homescren extends StatelessWidget{
 
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text("Active Projects",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25),),
+                ],
+              ),
+            ),
           ],
         ),
       ),
