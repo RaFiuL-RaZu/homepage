@@ -33,85 +33,46 @@ class Homescren extends StatelessWidget {
         ],
       ),
       drawer: Drawer(),
-      body:GridView(
-        gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-          childAspectRatio: .75,
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          childAspectRatio: .85,
         ),
         children: [
-          Card(
-            color: Colors.grey,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("5 Task Now"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("5 Task Now"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("5 Task Now"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("5 Task Now"),
-                ],
-              ),
-            ),
-          ),
+          ContactCard(),
+          ContactCard(),
+          ContactCard(),
+          ContactCard(),
         ],
+      ),
+    );
+  }
+}
+
+class ContactCard extends StatelessWidget {
+  const ContactCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.grey,
+      child: SizedBox(
+        height: 100,
+        width: 100,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.network(
+                "https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Medical App"),
+            ),
+            Text("5 Task Now"),
+          ],
+        ),
       ),
     );
   }
