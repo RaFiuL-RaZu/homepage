@@ -24,7 +24,7 @@ class Homescren extends StatelessWidget {
     {"img":"https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
     "price":"250",
     "offer":"230"},
-    {"img":"https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
+    {"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz-EPeNl5qhtTMFPK4C9FqGafqQDejdhMRs2QQL-HHmP5qhhF0BYPcsNNj-6ZsN2vAwYs&usqp=CAU",
       "price":"220",
       "offer":"200"},
     {"img":"https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
@@ -61,7 +61,7 @@ class Homescren extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
               itemCount: productInfo.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                 childAspectRatio: 0.85),
                 itemBuilder:(context,index){
                   return Card(
@@ -71,12 +71,13 @@ class Homescren extends StatelessWidget {
                       width: 100,
                       child:Column(
                         children: [
-                          Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                          Image.network(
+                              "${productInfo[index]["img"]}",height: 150,width:150,),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Medical App"),
+                            child: Text("Regular Price: ${productInfo[index]["price"]}"),
                           ),
-                          Text("18 Task,13 Target"),
+                          Text("Offer Price: ${productInfo[index]["offer"]}"),
                         ],
                       ),
                     ),
