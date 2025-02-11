@@ -33,18 +33,14 @@ class Homescren extends StatelessWidget {
         ],
       ),
       drawer: Drawer(),
-      body: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          childAspectRatio: .85,
-        ),
-        children: [
-          ContactCard(),
-          ContactCard(),
-          ContactCard(),
-          ContactCard(),
-        ],
-      ),
+      body: GridView.builder(
+          gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+
+          ),
+          itemBuilder:(context,index){
+            return  ContactCard(),
+          })
     );
   }
 }
