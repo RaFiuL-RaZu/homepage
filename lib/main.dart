@@ -34,7 +34,9 @@ class Homescren extends StatelessWidget {
       ),
       drawer: Drawer(),
       body:GridView(
-        gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+        ),
         children: [
           Card(
             color: Colors.grey,
@@ -47,6 +49,57 @@ class Homescren extends StatelessWidget {
                   Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
                   height: 200,
                   width: double.infinity,),
+                  Text("Medical App"),
+                  Text("5 Task Now"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
+                    height: 200,
+                    width: double.infinity,),
+                  Text("Medical App"),
+                  Text("5 Task Now"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
+                    height: 200,
+                    width: double.infinity,),
+                  Text("Medical App"),
+                  Text("5 Task Now"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
+                    height: 200,
+                    width: double.infinity,),
                   Text("Medical App"),
                   Text("5 Task Now"),
                 ],
