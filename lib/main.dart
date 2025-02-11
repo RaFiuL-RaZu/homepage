@@ -62,7 +62,7 @@ class Homescren extends StatelessWidget {
               itemCount: productInfo.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                childAspectRatio: 0.85),
+                childAspectRatio: 0.80),
                 itemBuilder:(context,index){
                   return Card(
                     color: Colors.grey,
