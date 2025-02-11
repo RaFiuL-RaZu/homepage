@@ -235,57 +235,31 @@ class Homescren extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    GridView(
-                      physics: NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2),
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 100,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.teal,
-                            ),
-                            child: Center(child: Text("Medical App",style: TextStyle(color: Colors.white,fontSize: 18),)),
+              Column(
+                children: [
+                  GridView(
+                      gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                    children: [
+                      Card(
+                        color: Colors.grey,
+                        child: SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: Column(
+                            children: [
+                              Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                              Text("Medical App"),
+                              Text("5 Task Now"),
+                            ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 100,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.orange,
-                            ),
-                            child: Center(child: Text("Making History Notes",style: TextStyle(color: Colors.white,fontSize: 18),)),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 100,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.teal,
-                            ),
-                            child: Center(child: Text("Medical App",style: TextStyle(color: Colors.white,fontSize: 18),)),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+
+                ],
               ),
+
             ],
           ),
         ),
