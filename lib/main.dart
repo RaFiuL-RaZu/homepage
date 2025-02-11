@@ -33,114 +33,40 @@ class Homescren extends StatelessWidget {
         ],
       ),
       drawer: Drawer(),
-      body:GridView(
-        gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-        childAspectRatio: 0.85),
-        children: [
-          Card(
-            color: Colors.grey,
-            child:SizedBox(
-              height: 100,
-              width: 100,
-              child:Column(
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("18 Task,13 Target"),
-                ],
-              ),
+      body:GridView.builder(
+        itemCount: 15,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+          childAspectRatio: 0.85),
+          itemBuilder:(context,index){
+            return ContactCard();
+          }),
+    );
+  }
+}
+
+class ContactCard extends StatelessWidget {
+  const ContactCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.grey,
+      child:SizedBox(
+        height: 100,
+        width: 100,
+        child:Column(
+          children: [
+            Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Medical App"),
             ),
-          ),
-          Card(
-            color: Colors.grey,
-            child:SizedBox(
-              height: 100,
-              width: 100,
-              child:Column(
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("18 Task,13 Target"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child:SizedBox(
-              height: 100,
-              width: 100,
-              child:Column(
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("18 Task,13 Target"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child:SizedBox(
-              height: 100,
-              width: 100,
-              child:Column(
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("18 Task,13 Target"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child:SizedBox(
-              height: 100,
-              width: 100,
-              child:Column(
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("18 Task,13 Target"),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.grey,
-            child:SizedBox(
-              height: 100,
-              width: 100,
-              child:Column(
-                children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Medical App"),
-                  ),
-                  Text("18 Task,13 Target"),
-                ],
-              ),
-            ),
-          ),
-        ],
+            Text("18 Task,13 Target"),
+          ],
+        ),
       ),
     );
   }
