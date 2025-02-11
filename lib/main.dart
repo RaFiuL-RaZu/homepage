@@ -50,6 +50,7 @@ class Homescren extends StatelessWidget {
       drawer: Drawer(),
       body:SingleChildScrollView(
         child: Column(
+
           children: [
             Container(
               height: 200,
@@ -69,22 +70,24 @@ class Homescren extends StatelessWidget {
                     child:SizedBox(
                       height: 100,
                       width: 100,
-                      child:Column(
-                        children: [
-                          Image.network(
-                              "${productInfo[index]["img"]}",height: 150,width:150,),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text("Regular Price:"),
-                                Text("${productInfo[index]["price"]}",style: TextStyle(decoration: TextDecoration.lineThrough),),
+                      child:Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.network(
+                                "${productInfo[index]["img"]}",height: 150,width:150,),
+                              Row(
+                                children: [
+                                  Text("Regular Price:"),
+                                  Text("${productInfo[index]["price"]}",style: TextStyle(decoration: TextDecoration.lineThrough),),
 
-                              ],
-                            ),
-                          ),
-                          Text("Offer Price: ${productInfo[index]["offer"]}"),
-                        ],
+                                ],
+                              ),
+
+                            Text("Offer Price: ${productInfo[index]["offer"]}"),
+                          ],
+                        ),
                       ),
                     ),
                   );
