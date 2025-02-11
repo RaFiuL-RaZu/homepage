@@ -36,6 +36,7 @@ class Homescren extends StatelessWidget {
       body:GridView(
         gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
+          childAspectRatio: .75,
         ),
         children: [
           Card(
