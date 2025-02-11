@@ -46,10 +46,11 @@ class Homescren extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
-                  height: 200,
-                  width: double.infinity,),
-                  Text("Medical App"),
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
                   Text("5 Task Now"),
                 ],
               ),
@@ -63,10 +64,11 @@ class Homescren extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
-                    height: 200,
-                    width: double.infinity,),
-                  Text("Medical App"),
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
                   Text("5 Task Now"),
                 ],
               ),
@@ -80,10 +82,11 @@ class Homescren extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
-                    height: 200,
-                    width: double.infinity,),
-                  Text("Medical App"),
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
                   Text("5 Task Now"),
                 ],
               ),
@@ -97,10 +100,11 @@ class Homescren extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg",
-                    height: 200,
-                    width: double.infinity,),
-                  Text("Medical App"),
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
                   Text("5 Task Now"),
                 ],
               ),
