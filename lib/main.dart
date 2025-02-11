@@ -75,7 +75,13 @@ class Homescren extends StatelessWidget {
                               "${productInfo[index]["img"]}",height: 150,width:150,),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Regular Price: ${productInfo[index]["price"]}",style: TextStyle(decoration: TextDecoration.underline),),
+                            child: Row(
+                              children: [
+                                Text("Regular Price:"),
+                                Text("${productInfo[index]["price"]}",style: TextStyle(decoration: TextDecoration.lineThrough),),
+
+                              ],
+                            ),
                           ),
                           Text("Offer Price: ${productInfo[index]["offer"]}"),
                         ],
