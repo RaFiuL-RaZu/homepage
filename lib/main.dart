@@ -33,51 +33,117 @@ class Homescren extends StatelessWidget {
         ],
       ),
       drawer: Drawer(),
-      body: Column(
+      body:GridView(
+        gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+        childAspectRatio: 0.85),
         children: [
-          Container(
-            height: 100,
-            width: double.infinity,
+          Card(
             color: Colors.grey,
-          ),
-          GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+            child:SizedBox(
+              height: 100,
+              width: 100,
+              child:Column(
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
+                  Text("18 Task,13 Target"),
+                ],
               ),
-              itemBuilder: (context, index) {
-                return ContactCard();
-              }),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child:SizedBox(
+              height: 100,
+              width: 100,
+              child:Column(
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
+                  Text("18 Task,13 Target"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child:SizedBox(
+              height: 100,
+              width: 100,
+              child:Column(
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
+                  Text("18 Task,13 Target"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child:SizedBox(
+              height: 100,
+              width: 100,
+              child:Column(
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
+                  Text("18 Task,13 Target"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child:SizedBox(
+              height: 100,
+              width: 100,
+              child:Column(
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
+                  Text("18 Task,13 Target"),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child:SizedBox(
+              height: 100,
+              width: 100,
+              child:Column(
+                children: [
+                  Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Medical App"),
+                  ),
+                  Text("18 Task,13 Target"),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 }
 
-class ContactCard extends StatelessWidget {
-  const ContactCard({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: Colors.grey,
-      child: SizedBox(
-        height: 100,
-        width: 100,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Image.network(
-                "https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("Medical App"),
-            ),
-            Text("5 Task Now"),
-          ],
-        ),
-      ),
-    );
-  }
-}
